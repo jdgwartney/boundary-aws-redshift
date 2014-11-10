@@ -1,3 +1,4 @@
+drop table if exists users;
 create table users
 (
 userid integer not null distkey sortkey,
@@ -20,6 +21,7 @@ likebroadway boolean,
 likemusicals boolean
 );
 
+drop table if exists venue;
 create table venue
 (
 venueid smallint not null distkey sortkey,
@@ -29,6 +31,7 @@ venuestate char(2),
 venueseats integer
 );
 
+drop table if exists category;
 create table category
 (
 catid smallint not null distkey sortkey,
@@ -37,6 +40,7 @@ catname varchar(10),
 catdesc varchar(50)
 );
 
+drop table if exists date;
 create table date
 (
 dateid smallint not null distkey sortkey,
@@ -49,6 +53,7 @@ year smallint not null,
 holiday boolean default('N')
 );
 
+drop table if exists event;
 create table event
 (
 eventid integer not null distkey,
@@ -59,6 +64,7 @@ eventname varchar(200),
 starttime timestamp
 );
 
+drop table if exists listing;
 create table listing
 (
 listid integer not null distkey,
@@ -71,6 +77,7 @@ totalprice decimal(8,2),
 listtime timestamp
 );
 
+drop table if exists sales;
 create table sales
 (
 salesid integer not null,
